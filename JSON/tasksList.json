@@ -1,0 +1,18 @@
+[
+  {
+    "task": "Wash Hands",
+    "steps": ["Turn on faucet", "Wet hands", "Turn off faucet", "Get soap", "Scrub hands together", "Turn on faucet", "Rinse soap off hands", "Turn off faucet"],
+    "icons": ["TurnOnFaucetSlide.png", "WetHandsSlide.png", "TurnOffFaucetSlide.png", "GetSoapSlide.png", "ScrubHands.png", "TurnOnFaucetSlide.png", "RinseSoapSlide.png", "TurnOffFaucetSlide.png"]
+  }, 
+  {
+    "task": "Brush Teeth",
+    "steps": ["Wash hands", "Find toothpaste", "Find toothbrush", "Wet toothbrush", "Add toothpaste", "Brush for 2 minutes"],
+    "icons": []
+  },
+  {
+    "task": "Shower",
+    "steps": ["Turn on shower", "Get shampoo", "Scrub head with shampoo", "Rinse shampoo off", "Get body wash", "Apply and scrub body wash", "Wash off body wash", "Turn off shower", "Get towel", "Dry body and hair with towel"],
+    "icons": []
+  }
+  
+  ]
