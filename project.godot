@@ -12,19 +12,29 @@ config_version=4
 
 config/name="AFGFinal"
 run/main_scene="res://Scenes/MainScene.tscn"
-config/icon="res://icon.png"
+config/icon="res://applogo.png"
 
 [autoload]
 
-InputControl="*res://Scenes/InputControl.gd"
+InputControl="*res://Scripts/InputControl.gd"
+Backgroundsound="*res://Scenes/backgroundsound.tscn"
+Clicksound="*res://Scenes/clicksound.tscn"
+Swapsound="*res://SoundScenes/swapsound.tscn"
+Correctsound="*res://SoundScenes/correctsound.tscn"
+Boxsound="*res://SoundScenes/boxsound.tscn"
+Boxonclick="*res://SoundScenes/boxonclick.tscn"
+Gamemusic="*res://SoundScenes/gamemusic.tscn"
+SceneTransition="*res://Scenes/scene_transition.tscn"
 
 [display]
 
-window/size/width=1000
-window/size/height=800
+window/size/width=576
+window/size/height=1024
 window/size/test_width=576
 window/size/test_height=1024
 window/handheld/orientation="portrait"
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
 
 [gui]
 
