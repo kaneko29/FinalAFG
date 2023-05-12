@@ -1,0 +1,82 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Fonts/Gugi-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Fonts/gugi-60.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Scripts/InputControl.gd" type="Script" id=3]
+[ext_resource path="res://Scripts/UI.gd" type="Script" id=4]
+[ext_resource path="res://applogo.png" type="Texture" id=5]
+
+[sub_resource type="Theme" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.847059, 0.945098, 1, 1 )
+
+[sub_resource type="Theme" id=3]
+ItemList/colors/font_color = Color( 0.847059, 0.945098, 1, 1 )
+ItemList/colors/font_color_selected = Color( 0, 0, 0, 1 )
+ItemList/colors/guide_color = Color( 0.847059, 0.945098, 1, 1 )
+ItemList/styles/bg = SubResource( 4 )
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Background"]
+margin_right = 576.0
+margin_bottom = 1024.0
+theme = SubResource( 5 )
+color = Color( 0.847059, 0.945098, 1, 1 )
+
+[node name="UI" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Title" type="Label" parent="UI"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 80.0
+margin_top = 450.0
+margin_right = 80.0
+rect_scale = Vector2( 0.998188, 1.00407 )
+custom_colors/font_color = Color( 0, 0, 0, 0.560784 )
+custom_fonts/font = SubResource( 1 )
+text = "Learn 2 Do"
+align = 1
+valign = 1
+
+[node name="MenuButtons" type="Node2D" parent="UI"]
+
+[node name="StartList" type="ItemList" parent="UI/MenuButtons"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 89.0
+margin_top = 577.0
+margin_right = 485.0
+margin_bottom = 958.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource( 3 )
+custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.756863, 0.756863, 0.756863, 1 )
+custom_fonts/font = ExtResource( 2 )
+items = [ "Start", null, false, "Settings", null, false ]
+
+[node name="Score" type="Node2D" parent="."]
+
+[node name="Buttons" type="Node2D" parent="."]
+
+[node name="Node" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 107.0
+margin_top = 99.0
+margin_right = 607.0
+margin_bottom = 599.0
+rect_scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 5 )
+
+[connection signal="item_selected" from="UI/MenuButtons/StartList" to="UI" method="_on_StartList_item_selected"]
